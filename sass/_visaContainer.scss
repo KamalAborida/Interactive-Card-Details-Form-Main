@@ -21,7 +21,7 @@
 }
 
 .visa-front{
-  @include backgroundStructure(url(/images/bg-card-front.png), no-repeat, cover);
+  @include backgroundStructure(url(./images/bg-card-front.png), no-repeat, cover);
   position: relative;
   z-index: 100;
   top: 120px;
@@ -29,7 +29,7 @@
 }
 
 .visa-back{
-  @include backgroundStructure(url(/images/bg-card-back.png), no-repeat, cover);
+  @include backgroundStructure(url(./images/bg-card-back.png), no-repeat, cover);
   position: relative;
   bottom: 120px;
   left: 20px;
