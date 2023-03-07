@@ -221,7 +221,7 @@ main {
 
 .side-panel {
   width: 100%;
-  background: url(/images/bg-main-desktop.png);
+  background: url("../images/bg-main-desktop.png");
   height: 250px;
   position: absolute;
   top: 0;
