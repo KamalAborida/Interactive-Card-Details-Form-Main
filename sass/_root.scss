@@ -1,0 +1,17 @@
+@import './variables';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+html {
+  font-size: $fontSize;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+input {
+  text-transform: none;
+}

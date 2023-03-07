@@ -1,0 +1,113 @@
+@import './root';
+@import './variables';
+@import './form';
+@import './visaContainer';
+
+@mixin flex($justifyContent, $direction: row, $alignItems: center) {
+  display: flex;
+  justify-content: $justifyContent;
+  flex-direction: $direction;
+  align-items: $alignItems;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  position: absolute;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  @include flex(space-between, column, none);
+
+}
+
+.side-panel{
+  width: 100%;
+  background: url(/images/bg-main-desktop.png);
+  height: 250px;
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-structure {
+  width: 100%;
+  border-radius: 10px;
+  padding: 1.2em;
+  margin-top: 20px;
+  border: 0;
+}
+
+.btn-skin {
+  background: $VeryDarkViolet;
+  color: $White;
+}
+
+.error {
+  color: red;
+  font-size: .7rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-exp-date {
+  grid-area: error;
+  font-size: .6rem;
+}
+
+.complete-state-container {
+  text-align: center;
+  display: none;
+  width: 90%;
+  margin: 10px auto;
+  font-size: 1rem;
+
+  p, h1, svg {
+    margin: 20px 0;
+  }
+
+  h1 {
+    letter-spacing: .2em;
+    color: $VeryDarkViolet;
+  }
+
+  p {
+    color: $LightGrayishViolet;
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .side-panel {
+    width: 30%;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  main {
+    width: 80%;
+    margin: 100px auto;
+    @include flex(space-between, row, center);
+  }
+
+  .complete-state-container {
+    width: 35%;
+  }
+}
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script src="app.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+
+  <div class="side-panel"></div>
+
+  <main>
+    <div class="visa-container">
+      <div class="visa-structure visa-front">
+        <div>
+          <svg id="visa-logo" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+        </div>
+        <div>
+          <p id="card-number">
+            0000 0000 0000 0000
+          </p>
+        </div>
+        <div>
+          <p id="name">JANE APPLESEED</p>
+          <p id="exp-date">00/00</p>
+        </div>
+      </div>
+  
+      <div class="visa-structure visa-back">
+        <div>
+          <p id="last-number">0000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="complete-state-container" id="complete-state">
+      <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+      <h1>Thank You!</h1>
+      <p>We've added tour card details</p>
+      <button class="btn-structure btn-skin" id="continueBtn">Continue</button>
+    </div>
+
+    <form>
+      <div class="form-member">
+        <label for="">Cardholder Name</label>
+        <input type="text" id="card-name" placeholder="e.g. Jane Applesseed">
+        <p class="error" id="error-name">Wrong Name Format e.g. Kamal Osama</p>
+      </div>
+
+      <div class="form-member" id="form-member-cardNumber">
+        <label for="">Card Number</label>
+        <input type="text" id="card-number-input" placeholder="e.g. 1234 5678 9123 4567">
+        <p class="error" id="error-number">Wrong number Format e.g. xxxx-xxxx-xxxx-xxxx</p>
+      </div>
+
+      <div class="last-form-member">
+        <div class="form-member-exp-date" id="form-member-expDate">
+          <label for="">Exp. Date (MM/YY)</label>
+          <input type="text" id="exp-month" placeholder="MM">
+          <input type="text" id="exp-year" placeholder="YY">
+          <p class="error error-exp-date" id="error-exp">Wrong number Format e.g. xxxx-xxxx-xxxx-xxxx</p>
+        </div>
+        <div class="form-member" id="form-member-cvv">
+          <label for="">CVV</label>
+          <input type="text" id="card-cvv" placeholder="e.g. 123">
+          <p class="error" id="error-cvv">Wrong cvv Format e.g. xxx</p>
+        </div>
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn-structure btn-skin">Confirm</button>
+    </form>
+  </main>
+</body>
+</html>

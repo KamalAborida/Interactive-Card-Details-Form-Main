@@ -1,0 +1,77 @@
+form{
+  width: 90%;
+  // padding: .5em;
+  font-size: .5rem;
+  margin: 0 auto;
+}
+
+input {
+  border-radius: 3px;
+  border: 2px solid $LightGrayishViolet;
+  padding: .5em;
+}
+
+label {
+  margin-bottom: 5px;
+  color: $VeryDarkViolet;
+  word-spacing: .1em;
+}
+
+.form-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  margin-bottom: 20px;
+}
+
+
+/*Expiration Label-Input*/
+.form-member-exp-date {
+  display: grid;
+  grid-template-areas: 
+  "label label"
+  "input1 input2"
+  "error error";
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.last-form-member{
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-form-member > div:last-of-type{
+  width: 45%;
+}
+
+.form-member-exp-date label {
+  grid-area: label;
+}
+
+.form-member-exp-date input {
+  width: 70px;
+}
+
+.form-member-exp-date input:first-of-type {
+  grid-area: input1;
+}
+
+.form-member-exp-date input:last-of-type {
+  grid-area: input2;
+}
+/*Expiration Label-Input*/
+
+
+@media screen and (min-width: 1000px) {
+  form {
+    font-size: .8rem;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .last-form-member > div:last-of-type{
+    width: 80%;
+  }
+}
